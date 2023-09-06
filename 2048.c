@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+#include <time.h>
 
 #define SIZE 4
 
@@ -81,7 +82,7 @@ void moveTiles(char direction) {
             }
             break;
 
-        case 'a': //
+        case 'a':
             for (int i = 0; i < SIZE; i++) {
                 for (int j = 1; j < SIZE; j++) {
                     if (grid[i][j] != 0) {
@@ -114,7 +115,7 @@ void moveTiles(char direction) {
                             row++;
                             moved = 1;
                         }
-                        if (row < SIZE - 1 && grid[row +1][j] == grid[row][j]) {
+                        if (row < SIZE - 1 && grid[row + 1][j] == grid[row][j]) {
                             grid[row + 1][j] *= 2;
                             score += grid[row + 1][j];
                             grid[row][j] = 0;
@@ -155,6 +156,7 @@ void moveTiles(char direction) {
         placeRandomTile();
     }
 }
+
 int isGameOver() {
     for (int i = 0; i < SIZE; i++) {
         for (int j = 0; j < SIZE; j++) {
@@ -165,26 +167,16 @@ int isGameOver() {
     }
     return 1;
 }
-// Function to calculate the score based on the values of the tiles on the grid
-int calculateScore() {
-    int score = 0;
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
-            score += grid[i][j];
-        }
-    }
-    return score;
-}
-
 
 int main() {
+    srand(time(0)); // Seed the random number generator
     int highestScore = 0;
     char playAgain;
     do {
         printf("Enter your name: ");
         scanf("%s", playerName);
         getchar();
-        int score = 0;
+        score = 0; // Reset the score before each game
         initializeGrid(); // Reset the grid before each game
         placeRandomTile();
         placeRandomTile();
@@ -200,9 +192,6 @@ int main() {
             }
 
             moveTiles(move);
-
-            // Update the score after each move
-            score = calculateScore();
 
             if (score > highestScore) {
                 highestScore = score;

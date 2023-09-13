@@ -71,5 +71,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - This game is inspired by the original 2048 game created by Gabriele Cirulli.
 
 ```
-
-Make sure to replace `"yourusername"` with your actual GitHub username and customize any contact information accordingly. This README covers the contents and usage of your repository, installation instructions, and guidelines for contributions and licensing.

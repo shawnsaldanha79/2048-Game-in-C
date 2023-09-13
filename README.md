@@ -68,6 +68,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgments
 
-- This game is inspired by the original 2048 game created by Gabriele Cirulli.
+This game is inspired by the original 2048 game created by Gabriele Cirulli.
 
 ```

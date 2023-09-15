@@ -13,7 +13,7 @@ This is a simple implementation of the classic 2048 game in C programming.
 
 ## Description
 
-The repository contains the source code (`2048.c`) and an executable file (`2048.exe`) for the 2048 game. Additionally, there's a mind map (`2048 Mind Map.pdf`) and a flowchart (`2048 Flowchart.pdf`) that illustrates the game's logic and flow.
+The repository contains the source code (`2048.c`) and an executable file (`2048.exe`) for the 2048 game. Additionally, there's a mind map (`2048 Mind Map.pdf`) and a flowchart (`2048 Flowchart.png`) that illustrates the game's logic and flow.
 
 ## Getting Started
 
